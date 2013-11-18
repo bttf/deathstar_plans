@@ -1,5 +1,5 @@
 ### bootstrap
-Used to bootstrap a clean machine with puppet.
+Bootstrap a clean machine with puppet.
 
 Currently supports:
 * Ubuntu 12.04
