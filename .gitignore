@@ -1,0 +1,3 @@
+bootstrap/ubuntu-precise/ruby*
+bootstrap/ubuntu-precise/puppet.conf
+*.swp
