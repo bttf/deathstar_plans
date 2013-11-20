@@ -1,4 +1,5 @@
 bootstrap/ubuntu-precise/downloads/*
 bootstrap/ubuntu-precise/puppet.conf*
+puppetmaster/downloads/*
 modules/*
 *.swp
