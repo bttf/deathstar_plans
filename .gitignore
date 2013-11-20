@@ -1,3 +1,4 @@
-bootstrap/ubuntu-precise/ruby*
+bootstrap/ubuntu-precise/downloads/*
 bootstrap/ubuntu-precise/puppet.conf*
+modules/*
 *.swp
