@@ -4,8 +4,8 @@ apt-get update
 apt-get install -y vim gcc tmux make libssl-dev git libyaml-dev libsqlite3-dev
 ruby -v > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-  mkdir -p downloads
-  cd downloads
+  mkdir -p $DIR/downloads
+  cd $DIR/downloads
   wget -nc http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p448.tar.gz
   tar zxvf ruby-1.9.3-p448.tar.gz
   cd ruby-1.9.3-p448
@@ -19,7 +19,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 gem install --no-rdoc --no-ri puppet bundler
-cd downloads
+cd $DIR/downloads
 git clone -b stable https://github.com/puppetlabs/puppet.git
 cd puppet
 bundle install --without extra

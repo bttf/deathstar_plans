@@ -7,4 +7,3 @@ cd -
 dpkg -i $DIR/downloads/puppetlabs-release-precise.deb
 apt-get update
 apt-get install -y puppetmaster-passenger
-echo "*" > /etc/puppet/autosign.conf
