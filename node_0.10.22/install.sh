@@ -4,6 +4,7 @@ apt-get install -y gcc g++
 cd $DIR
 wget http://nodejs.org/dist/v0.10.22/node-v0.10.22.tar.gz
 tar zxvf node-v0.10.22.tar.gz
+chmod -R 777 node-v0.10.22/
 cd node-v0.10.22
 ./configure
 make
