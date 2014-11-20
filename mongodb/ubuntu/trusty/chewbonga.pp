@@ -1,8 +1,8 @@
 class {'::mongodb::server':
-  auth => true
+  auth => true,
 }
 
 mongodb::db {'chewbonga':
   user     => 'chewie',
-  password => 'hancaneatafatone'
+  password => 'hancaneatafatone',
 }
