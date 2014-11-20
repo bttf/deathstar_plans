@@ -2,5 +2,6 @@ bootstrap/ubuntu-precise/downloads/*
 bootstrap/ubuntu-precise/puppet.conf*
 downloads/*
 */downloads/*
-modules/*
+*/modules
+*/.tmp
 *.swp
