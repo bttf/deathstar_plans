@@ -1,11 +1,22 @@
-$backend_port = '1234'
-$frontend_dir = '/usr/share/nginx/html'
+$backend_port = '1212'
+$frontend_dir = '/home/bttf/ember-blog/dist'
 
 include nginx
 
 nginx::resource::vhost {'chewbonga.com':
-  server_name         => ['chewbonga.com', 'www.chewbonga.com', '*.chewbonga.com'],
-  www_root            => $frontend_dir,
+  ensure        => present,
+  server_name   => ['chewbonga.com', 'www.chewbonga.com', '*.chewbonga.com'],
+  try_files     => ['$uri', '$uri/', '/index.html?/$request_uri'],
+  www_root      => "${frontend_dir}",
+}
+
+nginx::resource::location {'dot-git':
+  ensure              => present,
+  vhost               => 'chewbonga.com',
+  location            => '~ /\.git',
+  location_custom_cfg => {
+    deny              => 'all',
+  }
 }
 
 nginx::resource::location {'chewbonga.com-api':
