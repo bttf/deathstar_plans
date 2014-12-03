@@ -14,6 +14,6 @@ firewall {'110 http/https':
 
 firewall {'123 development':
   proto  => 'tcp',
-  port   => [8000, 8080, 3000, 4200],
+  port   => [8000, 8080, 3000, 4200, 35729],
   action => 'accept',
 }
