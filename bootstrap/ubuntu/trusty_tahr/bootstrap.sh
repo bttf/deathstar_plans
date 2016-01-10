@@ -9,6 +9,6 @@ wget -nc -P $TMP_DIR https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
 
 dpkg -i $TMP_DIR/puppetlabs-release-trusty.deb 
 
-apt-get update && apt-get install -y puppet
+apt-get update && apt-get install -y build-essential puppet
 
 puppet config set pluginsync true --section main
