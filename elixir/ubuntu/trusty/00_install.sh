@@ -6,3 +6,5 @@ dpkg -i erlang-solutions_1.0_all.deb
 apt-get update -y
 
 apt-get install esl-erlang elixir -y
+
+mix local.hex
